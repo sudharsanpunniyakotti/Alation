@@ -9,7 +9,7 @@
 - name: copying html file
   copy:
     content: |
-     Hello World "{{ number }}"
+     Hello World "{{ ansible_hostname }}"
     dest: /var/www/html/index.html
 
 - name: templates
