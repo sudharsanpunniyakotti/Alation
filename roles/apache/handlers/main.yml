@@ -1,0 +1,7 @@
+---
+# handlers file for apache
+
+- name: "restarts"
+  service:
+    name: "{{ pack }}"
+    state: "restarted"

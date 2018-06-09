@@ -1,0 +1,4 @@
+---
+# vars file for haproxy
+#
+pack: ['haproxy','net-tools']

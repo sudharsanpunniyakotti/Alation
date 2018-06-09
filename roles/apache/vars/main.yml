@@ -1,0 +1,7 @@
+---
+# vars file for apache
+pack: "httpd"
+
+port: 8080
+
+number: 4

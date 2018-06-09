@@ -1,0 +1,27 @@
+---
+# tasks file for apache
+
+- name: installing httpd
+  yum:
+    name: "{{ pack }}"
+    state: "installed"
+
+- name: copying html file
+  copy:
+    content: |
+     welcome to ansible "{{ number }}"
+    dest: /var/www/html/index.html
+
+- name: templates
+  template:
+    src: "httpd.conf.j2"
+    dest: /etc/httpd/conf/httpd.conf
+  notify:
+    - "restarts"
+
+- name: service start
+  service:
+    name: "{{ pack }}"
+    state: "started"
+
+
